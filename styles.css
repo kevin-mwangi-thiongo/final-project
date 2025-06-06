@@ -1,0 +1,956 @@
+/* --- CSS Variables --- */
+:root {
+    --primary-color: #ff6600; /* SwiftThion Orange */
+    --primary-hover-color: #e65500; /* Darker primary color for hover */
+    --secondary-color: #004080; /* Dark Blue */
+    --accent-color: #0066cc; /* Lighter Blue for hover/accent */
+    --light-bg: #f9f9f9;
+    --dark-bg: #e6e6e6; /* A slightly darker light background */
+    --white-color: #fff;
+    --text-color: #333;
+    --text-color-light: #666; /* Added for section descriptions, etc. */
+    --border-color: #ccc;
+    --shadow-small: 0 2px 8px rgba(0,0,0,0.05); /* Renamed from shadow-light for clarity */
+    --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
+    --spacing-xs: 10px;
+    --spacing-sm: 15px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    --border-radius-sm: 5px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --light-peach-color: #ffe6d9; /* Example from image */
+    --dark-green-color: #0066cc;  /* Example from image */
+}
+html {
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+}
+*, *::before, *::after {
+    box-sizing: inherit; /* Inherit box-sizing for all elements */
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: var(--dark-bg);
+    color: var(--text-color);
+}
+
+/* Grouping common heading styles */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+    color: var(--primary-color); /* Applied to all headings */
+}
+
+/* Grouping common link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease; /* Add transition for all links */
+}
+a:hover {
+    color: var(--accent-color); /* Default hover color for links */
+}
+
+/* Base list styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Container Class --- */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* --- Section General Styles --- */
+.section {
+    padding: var(--spacing-xl) 0;
+    text-align: center; /* Default center align section content */
+}
+.section .section-title { /* Explicitly target section titles */
+    font-size: clamp(1.8em, 4vw, 2.8em);
+    margin-bottom: var(--spacing-lg);
+    color: var(--dark-blue-color); /* Specific color for section titles */
+}
+.section .section-description { /* Explicitly target section descriptions */
+    font-size: clamp(0.95em, 2vw, 1.1em);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg) auto;
+    color: var(--text-color-light);
+}
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+/* --- Buttons --- */
+/* Consolidated common button styles */
+.primary-button,
+.secondary-button {
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    border-radius: var(--border-radius-md); /* Consistent border-radius */
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.primary-button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.secondary-button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+.secondary-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Specific button overrides */
+.explore-btn {
+    margin-top: var(--spacing-xl);
+}
+
+
+/* --- Navbar Styles --- */
+.navbar {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: var(--spacing-xs) 0;
+    box-shadow: var(--shadow-small); /* Using renamed variable */
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.logo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-link {
+    display: block;
+    height: 100%;
+}
+.site-logo {
+    max-height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: max-height 0.3s ease;
+}
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: var(--spacing-md);
+}
+.nav-left li a,
+.nav-right li a {
+    color: var(--white-color);
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+.nav-left li a:hover,
+.nav-right li a:hover {
+    background-color: var(--accent-color);
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+/* --- Header (Hero) and Image Overlay Styles --- */
+.header {
+    width: 100%;
+    margin-bottom: var(--spacing-xl);
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+.image-container img.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white-color);
+    z-index: 2;
+    padding: var(--spacing-md);
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: var(--border-radius-md);
+}
+.overlay-text h1 {
+    font-size: clamp(2em, 5vw, 3.5em);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+.overlay-text p {
+    font-size: clamp(1em, 2.5vw, 1.5em);
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+
+/* --- How It Works Section --- */
+.how-it-works-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    align-items: center;
+    text-align: left; /* Align text within this section to left */
+}
+.how-it-works-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+.how-it-works-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+}
+.how-it-works-text {
+    flex: 2;
+    min-width: 300px;
+}
+/* Reusing general heading/paragraph styles, no need to redefine text-align here if parent is left-aligned */
+.how-it-works-text p {
+    margin-left: 0; /* Override default section p margin */
+    margin-right: 0;
+}
+.how-it-works-text strong {
+    font-size: 1.1em;
+}
+
+
+/* --- Cargo Shipping Section --- */
+.cargo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+    text-align: left; /* Align text within this section to left */
+}
+.cargo-content-wrapper {
+    flex: 2;
+    min-width: 100px;
+    background-color: var(--white-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-medium);
+}
+/* Reusing general heading/paragraph styles, no need to redefine text-align here */
+.cargo-content-wrapper h2 {
+    margin-bottom: var(--spacing-sm);
+}
+.cargo-content-wrapper p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: var(--spacing-md);
+}
+.business-only {
+    color: var(--primary-color);
+    font-size: 0.7em;
+    font-weight: normal;
+}
+.shipping-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+.service-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-weight: bold;
+}
+.service-item i {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-right: var(--spacing-sm);
+    min-width: 30px;
+    text-align: center;
+}
+.cargo-image-wrapper {
+    flex: 1;
+    min-width: 500px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.cargo-main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-medium);
+}
+
+
+/* --- Services Grid & Card Box General Styles (including Testimonials) --- */
+.services-grid-box { /* This was generic grid for ALL service-card-box containers */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.service-card-box {
+    background: var(--white-color);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-small);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.service-card-box h3 {
+    font-size: 1.5em;
+    margin-bottom: var(--spacing-sm);
+    color: var(--secondary-color);
+}
+.service-card-box p {
+    font-size: 0.95em;
+    margin-bottom: var(--spacing-md);
+    margin-left: auto; /* Ensure paragraphs within cards are centered/auto */
+    margin-right: auto;
+    max-width: unset; /* Remove max-width for cards */
+}
+.service-card-box a {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: var(--spacing-sm);
+}
+
+/* --- Specific Testimonials Grid & Card Styling (horizontal layout) --- */
+#client-testimonials { /* Moved section specific styles here */
+    background-color: var(--dark-bg); /* Use dark-bg or a specific var */
+    padding: var(--spacing-xl) 0;
+}
+#client-testimonials .section-title { /* Override general section title color for testimonials */
+    color: var(--secondary-color);
+}
+
+.testimonials-grid { /* Overrides services-grid-box for horizontal layout */
+    display: flex; /* KEY: Use flexbox for horizontal layout */
+    flex-wrap: nowrap; /* KEY: Prevent items from wrapping */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Makes scrolling snap to individual cards */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    gap: var(--spacing-lg); /* Maintain gap */
+
+    /* Hide the scrollbar */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.testimonials-grid::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Overrides for service-card-box when inside testimonials-grid */
+.testimonials-grid .service-card-box {
+    flex-shrink: 0; /* Prevent cards from shrinking smaller than their content */
+    min-width: 320px; /* Define a minimum width for each card */
+    max-width: 400px; /* Optional: Define a max-width if you don't want them too wide */
+    scroll-snap-align: start; /* Ensures each card snaps to the start when scrolling */
+}
+.testimonials-grid .service-card-box p { /* Specific styling for testimonial text */
+    font-style: italic;
+    font-size: 1em;
+}
+
+/* Specific styling for the cards' background colors in testimonials */
+.testimonials-grid .service-card-box:nth-child(2n+1) {
+    background-color: var(--light-peach-color);
+    color: var(--dark-blue-color);
+}
+.testimonials-grid .service-card-box:nth-child(2n) {
+    background-color: var(--dark-green-color);
+    color: var(--white-color);
+}
+.testimonials-navigation {
+    display: flex;
+    justify-content: center; /* Center the navigation buttons */
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+}
+.arrow-button {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: var(--shadow-small);
+}
+.arrow-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transform: translateY(-2px);
+}
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: center;
+    justify-items: center;
+    margin-top: var(--spacing-lg);
+}
+.partner-card {
+    text-align: center;
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: var(--spacing-sm);
+}
+.partner-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: var(--spacing-xs);
+    filter: grayscale(80%);
+    transition: filter 0.3s ease;
+}
+.partner-card img:hover {
+    filter: grayscale(0%);
+}
+.partner-card p {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 0;
+}
+.faq-help-box {
+    text-align: left;
+}
+.faq-item {
+    margin-bottom: var(--spacing-sm);
+}
+.faq-question {
+    width: 100%;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+.faq-question:hover {
+    background-color: var(--accent-color);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #e6f0ff;
+    padding: 0 var(--spacing-md);
+    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--text-color);
+}
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+.faq-item.active .faq-question {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.toggle-icon {
+    font-weight: 700;
+    font-size: 1.5rem;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.tracking-box {
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tracking-box input[type="text"] {
+    width: calc(100% - 100px);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    margin-right: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+    display: inline-block;
+    vertical-align: middle;
+}
+.tracking-box .secondary-button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 1rem;
+    min-width: 90px;
+    vertical-align: middle;
+}
+
+.choose-us-box ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+.choose-us-box li {
+    font-size: clamp(1em, 2vw, 1.2em);
+    color: var(--text-color);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.choose-us-box li i {
+    color: var(--primary-color);
+    margin-right: var(--spacing-xs);
+    font-size: 1.2em;
+}
+
+.cta-box {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+.cta-box h2 {
+    color: var(--secondary-color);
+}
+.cta-box p {
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    justify-content: space-between;
+    text-align: left;
+}
+.contact-info,
+.follow-us,
+.message-form {
+    flex: 1;
+    min-width: 280px;
+}
+.contact-info p,
+.follow-us p,
+.form-group label {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+.contact-info p,
+.follow-us p {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1em;
+}
+.contact-info strong {
+    color: var(--secondary-color);
+}
+.follow-us a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.follow-us a:hover {
+    color: var(--primary-color);
+}
+.follow-us a i {
+    margin-right: var(--spacing-xs);
+    font-size: 1.2em;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: #555;
+}
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    font-family: inherit;
+}
+.form-group textarea {
+    resize: vertical;
+}
+.message-form .primary-button {
+    width: auto;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 1rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+.footer-logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+.footer-box p {
+    margin: 0;
+    font-size: 0.9em;
+    flex-basis: 100%;
+    order: 3;
+    margin-top: var(--spacing-md);
+}
+.footer-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+.footer-links a {
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+    .section .section-title {
+        font-size: 1.6em;
+    }
+    .section .section-description {
+        font-size: 0.9em;
+    }
+
+    /* Navbar */
+    .nav-content {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    .nav-left,
+    .nav-right {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: var(--spacing-xs);
+    }
+    .nav-left li a,
+    .nav-right li a {
+        display: block;
+        padding: var(--spacing-xs);
+    }
+    .logo {
+        order: -1;
+        margin-bottom: var(--spacing-sm);
+    }
+    .logo h1 { /* If you're using an h1 for logo, keep this. If it's just an image, this can be removed. */
+        font-size: 1.5rem;
+    }
+
+    /* How It Works Section */
+    .how-it-works-container {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    .how-it-works-image {
+        order: -1;
+    }
+    .how-it-works-text h2,
+    .how-it-works-text p {
+        text-align: center;
+    }
+
+    /* Cargo Shipping Section */
+    .cargo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cargo-content-wrapper {
+        order: 1;
+        padding: var(--spacing-md);
+    }
+    .cargo-content-wrapper h2,
+    .cargo-content-wrapper p {
+        text-align: center;
+    }
+    .shipping-services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .service-item {
+        justify-content: flex-start;
+    }
+    .cargo-image-wrapper {
+        order: -1;
+    }
+
+    /* Services Grid and Cards (General) */
+    .services-grid-box {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    .service-card-box {
+        padding: var(--spacing-md);
+    }
+    .service-card-box h3 {
+        font-size: 1.3em;
+    }
+    .service-card-box p {
+        font-size: 0.9em;
+    }
+
+    /* Testimonials (Overrides general .service-card-box) */
+    .testimonials-grid .service-card-box {
+        min-width: 90vw; /* On smaller screens, make cards take up most of the viewport width */
+        max-width: 90vw; /* Ensure they don't exceed this for consistent snapping */
+    }
+    .testimonials-grid {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+    .testimonials-grid .service-card-box p {
+        font-size: 0.9em;
+    }
+
+    /* Partners Grid */
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    /* FAQ */
+    .faq-help-box h2,
+    .faq-help-box h3,
+    .faq-help-box p {
+        text-align: center;
+    }
+    .faq-question {
+        font-size: 1rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    .faq-answer {
+        padding: 0 var(--spacing-sm);
+    }
+    .faq-item.active .faq-answer {
+        padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
+    /* Track Shipment */
+    .tracking-box input[type="text"],
+    .tracking-box .secondary-button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Why Choose Us */
+    .choose-us-box ul {
+        align-items: flex-start;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+    }
+    .choose-us-box li {
+        text-align: left;
+        font-size: 1em;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    .contact-info,
+    .follow-us,
+    .message-form {
+        width: 100%;
+        min-width: unset;
+    }
+    .contact-info p,
+    .follow-us p {
+        text-align: center;
+    }
+    .follow-us a {
+        justify-content: center;
+    }
+    .form-group label {
+        text-align: left;
+    }
+
+    /* Footer */
+    .footer-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-box p {
+        order: unset;
+        margin-top: 0;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        margin-top: var(--spacing-sm);
+    }
+}
+
+/* Medium devices (tablets, 601px to 992px) */
+@media (min-width: 601px) and (max-width: 992px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+    .section .section-title {
+        font-size: 2.2em;
+    }
+    .section .section-description {
+        font-size: 1em;
+    }
+
+    /* Navbar */
+    .nav-content {
+        gap: var(--spacing-md);
+    }
+    .nav-left,
+    .nav-right {
+        gap: var(--spacing-sm);
+    }
+    .logo h1 { /* If using h1 for logo */
+        font-size: 1.6rem;
+    }
+
+    /* How It Works Section */
+    .how-it-works-container {
+        gap: var(--spacing-lg);
+        text-align: left;
+    }
+    .how-it-works-image {
+        min-width: 400px;
+    }
+
+    /* Cargo Shipping Section */
+    .cargo-content-wrapper {
+        padding: var(--spacing-lg);
+    }
+    .shipping-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Services Grid and Cards */
+    .services-grid-box {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Contact Section */
+    .contact-content {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+        justify-content: space-around;
+    }
+    .contact-info,
+    .follow-us,
+    .message-form {
+        min-width: 250px;
+    }
+}
+
+/* Large devices (desktops, 993px and up) - base styles should handle this */
+@media (min-width: 993px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+}

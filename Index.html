@@ -1,284 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SwiftThion | Smart Logistics</title>
-  <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SwiftThion Express</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-  <header class="header">
-    <nav class="nav">
-      <ul class="nav-left">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shipping</a></li>
-        <li><a href="#">Track</a></li>
-      </ul>
-      <div class="logo">
-        <h1><strong>SwiftThion</strong></h1>
-      </div>
-      <ul class="nav-right">
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <ul class="nav-left">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Track</a></li>
+            </ul>
+            <div class="logo">
+                <h1><strong>SwiftThion Express</strong></h1>
+            </div>
+            <ul class="nav-right">
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
-    <section id="hero" class="hero">
-      <div class="hero-text">
-        <div class="hero-heading-box">
-          <h1>Smarter Logistics, Faster Deliveries</h1>
-          <p>Track, manage, and scale your shipping needs with SwiftThion.</p>
-          <button class="primary-button">Request a Quote</button>
+    <header class="header">
+        <div class="image-container">
+            <img src="images/card.png" alt="Fleet in motion" class="image" />
+            <div class="overlay-text">
+                <h1>Smarter Logistics, Faster Deliveries</h1>
+                <p>Track, manage, and scale your shipping needs with SwiftThion Express.</p>
+                <button class="primary-button">Request a Quote</button>
+            </div>
         </div>
-        <div class="hero-image-box">
-          <img src="images/truckship.jpg" alt="Fleet in motion" />
+    </header>
+
+    <section id="how-it-works" class="section">
+        <div class="container how-it-works-container">
+            <div class="how-it-works-image">
+                <img src="images/truck2.jpg" alt="Logistics process illustration" />
+            </div>
+            <div class="how-it-works-text">
+                <h2>How SwiftThion Express Works</h2>
+                <p><strong>1. Request a Pickup:</strong> Schedule a pickup through our platform at your convenience.</p>
+                <p><strong>2. Real-Time Tracking:</strong> Monitor your cargo live from departure to delivery using our tracking tools.</p>
+                <p><strong>3. On-Time Delivery:</strong> Enjoy efficient, reliable delivery supported by our dedicated logistics team.</p>
+                <p>Our streamlined system ensures your goods move quickly, safely, and with full transparency at every step.</p>
+                <button class="primary-button">Explore SwiftThion Express Forwarding</button>
+            </div>
         </div>
-      </div>
     </section>
-  </header>
 
-  <section id="how-it-works" class="section how-it-works-split">
-    <div class="container how-it-works-container">
-      <div class="how-it-works-image">
-        <img src="images/works.jpg" alt="Logistics process illustration" />
-      </div>
-      <div class="how-it-works-text">
-        <h2>How SwiftThion Works</h2>
-        <p><strong>1. Request a Pickup:</strong> Schedule a pickup through our platform at your convenience.</p>
-        <p><strong>2. Real-Time Tracking:</strong> Monitor your cargo live from departure to delivery using our tracking tools.</p>
-        <p><strong>3. On-Time Delivery:</strong> Enjoy efficient, reliable delivery supported by our dedicated logistics team.</p>
-        <p>Our streamlined system ensures your goods move quickly, safely, and with full transparency at every step.</p>
-        <button class="primary-button">Explore SwiftThion Forwarding</button>
-      </div>
-    </div>
-  </section>
+    <section id="cargo-shipping" class="section bg-light">
+        <div class="container cargo-container">
+            <div class="cargo-content-wrapper">
+                <h2>
+                    Cargo Shipping <span class="business-only">(Business Only)</span>
+                </h2>
+                <p>Discover shipping and logistics service options from SwiftThion Express Global Forwarding.</p>
 
-  <section id="cargo-shipping" class="section cargo-shipping-box">
+                <div class="shipping-services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-plane"></i>
+                        <span>Air Freight</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-road"></i>
+                        <span>Road Freight</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-ship"></i>
+                        <span>Ocean Freight</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-train"></i>
+                        <span>Rail Freight</span>
+                    </div>
+                </div>
+                <button class="primary-button">Get a Quote</button>
+            </div>
+            <div class="cargo-image-wrapper">
+                <img src="images/ship.png" alt="Cargo Shipping" class="cargo-main-image" />
+            </div>
+        </div>
+    </section>
+
+    <section id="enterprise-logistics" class="section">
+        <div class="container enterprise-logistics-box">
+            <h2>Enterprise Logistics Services <span class="business-only">(Business Only)</span></h2>
+            <p>Find out how SwiftThion Express Supply Chain can revolutionize your business as a 3PL provider.</p>
+            <div class="services-grid-box">
+                <div class="service-card-box">
+                    <h3>Warehousing</h3>
+                    <p>Scalable and secure warehousing tailored for any business size.</p>
+                </div>
+                <div class="service-card-box">
+                    <h3>Transport</h3>
+                    <p>End-to-end transportation services across all modes.</p>
+                </div>
+                <div class="service-card-box">
+                    <h3>Packaging</h3>
+                    <p>Custom packaging solutions to protect and optimize shipments.</p>
+                </div>
+                <div class="service-card-box">
+                    <h3>Service Logistics</h3>
+                    <p>Advanced support for service parts and reverse logistics.</p>
+                </div>
+                <div class="service-card-box">
+                    <h3>Real Estate</h3>
+                    <p>Strategic warehousing locations designed for business growth.</p>
+                </div>
+                <div class="service-card-box">
+                    <h3>And More</h3>
+                    <p>Explore our full suite of enterprise logistics solutions.</p>
+                </div>
+            </div>
+            <button class="primary-button explore-btn">Explore SwiftThion Express Supply Chain</button>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container services-box">
+            <h2>Our Logistics Services</h2>
+            <div class="services-grid-box">
+                <div class="service-card-box">
+                    <h3>Freight Shipping</h3>
+                    <p>Domestic and international cargo transport at scale.</p>
+                    <a href="#">Get Details</a>
+                </div>
+                <div class="service-card-box">
+                    <h3>Warehouse Management</h3>
+                    <p>Secure, flexible storage solutions for all types of goods.</p>
+                    <a href="#">See Locations</a>
+                </div>
+                <div class="service-card-box">
+                    <h3>Last Mile Delivery</h3>
+                    <p>On-time delivery to customers across urban and rural zones.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="client-testimonials" class="section">
     <div class="container">
-      <h2>Cargo Shipping <span style="color: red;">(Business Only)</span></h2>
-      <p>Discover shipping and logistics service options from DHL Global Forwarding.</p>
+        <h2 class="section-title">What Our Clients Are Saying</h2>
+        <p class="section-description">
+            Positive experiences from our valued clients highlight our commitment to excellence in logistics and customer service.
+                  </p>
 
-      <div class="shipping-layout" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
-        <div class="shipping-image" style="flex: 1; min-width: 300px;">
-          <img src="images/ship.png" alt="Cargo Shipping" style="width: 100%; height: auto; border-radius: 10px;" />
+        <div class="services-grid-box testimonials-grid">
+            <div class="service-card-box">
+                <h3>Mike C</h3>
+                <p>
+                    "Shipping with SwiftThion Express was seamless and on time. Their team truly understands
+                    logistics and customer care."
+                </p>
+            </div>
+            <div class="service-card-box">
+                <h3>Chris O</h3>
+                <p>
+                    "Our products reached customers faster than ever. SwiftThion Express’s supply chain
+                    solutions boosted our business efficiency."
+                </p>
+            </div>
+            <div class="service-card-box">
+                <h3>Donald T</h3>
+                <p>
+                    "I found Amid's shipping procedures simple and convenient, with excellent customer support.
+                    I will use their services again as needed.
+                </p>
+            </div>
+            <div class="service-card-box">
+                <h3>Falhal hazzad</h3>
+                <p>
+                    I had an excellent experience with your company.
+                    I'm very satisfied with the results and will recommend your services to others.
+                </p>
+            </div>
+            <div class="service-card-box">
+                <h3>Mitchelle</h3>
+                <p>
+                    I’ve had nothing but a good experience with these people my packages were received and Cambodia
+                    every question that I had they answered and help me through
+                </p>
+            </div>
+            <div class="service-card-box">
+                <h3>Rice</h3>
+                <p>
+                    "The staff is highly knowledgeable, and their service is truly excellent.
+                    They made an extraordinary effort to help us. Once again, their customer service was outstanding!
+                </p>
+            L</div>
         </div>
-        <div class="shipping-text" style="flex: 2; min-width: 300px;">
-          <h3>SwiftThion Cargo Shipping</h3>
-          <p>We offer a range of shipping services tailored to meet your business needs. Our solutions include:</p>
-          <ul>
-            <li>Air Freight</li>
-            <li>Road Freight</li>
-            <li>Ocean Freight</li>
-            <li>Rail Freight</li>
-          </ul>
-          <p>Contact us for a custom quote and to learn more about our logistics solutions.</p>
-          <button class="primary-button">Get a Quote</button>
+
+        <div class="testimonials-navigation">
+            <button class="arrow-button left-arrow" aria-label="Previous testimonial">
+                &larr; </button>
+            <button class="arrow-button right-arrow" aria-label="Next testimonial">
+                &rarr; </button>
         </div>
-      </div>
+        
     </div>
-  </section>
-
-
-  <section id="enterprise-logistics" class="section bg-light">
-  <div class="container enterprise-logistics-box">
-    <h2>Enterprise Logistics Services <span style="color: red;">(Business Only)</span></h2>
-    <p>Find out how SwiftThion Supply Chain can revolutionize your business as a 3PL provider.</p>
-    <div class="services-grid-box">
-      <div class="service-card-box">
-        <h3>Warehousing</h3>
-        <p>Scalable and secure warehousing tailored for any business size.</p>
-      </div>
-      <div class="service-card-box">
-        <h3>Transport</h3>
-        <p>End-to-end transportation services across all modes.</p>
-      </div>
-      <div class="service-card-box">
-        <h3>Packaging</h3>
-        <p>Custom packaging solutions to protect and optimize shipments.</p>
-      </div>
-      <div class="service-card-box">
-        <h3>Service Logistics</h3>
-        <p>Advanced support for service parts and reverse logistics.</p>
-      </div>
-      <div class="service-card-box">
-        <h3>Real Estate</h3>
-        <p>Strategic warehousing locations designed for business growth.</p>
-      </div>
-      <div class="service-card-box">
-        <h3>And More</h3>
-        <p>Explore our full suite of enterprise logistics solutions.</p>
-      </div>
-    </div>
-    <button class="primary-button explore-btn">Explore Swifthorn Supply Chain</button>
-  </div>
 </section>
+        
+    </section>
 
-  <section id="services" class="section bg-light">
-    <div class="container services-box">
-      <h2>Our Logistics Services</h2>
-      <div class="services-grid-box">
-        <div class="service-card-box">
-          <h3>Freight Shipping</h3>
-          <p>Domestic and international cargo transport at scale.</p>
-          <a href="#">Get Details</a>
+    <section id="partners" class="section bg-light">
+        <div class="container">
+            <h2>Our Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <img src="images/iyflogo.jpeg" alt="IYF Youth Fellowship Logo" />
+                    <p>IYF Youth Fellowship</p>
+                </div>
+                <div class="partner-card">
+                    <img src="images/goodnewsmission.jpg" alt="Good News Mission Logo" />
+                    <p>Good News Mission</p>
+                </div>
+                <div class="partner-card">
+                    <img src="images/gbstv.png" alt="GBS TV Logo" />
+                    <p>GBS TV</p>
+                </div>
+            </div>
         </div>
-        <div class="service-card-box">
-          <h3>Warehouse Management</h3>
-          <p>Secure, flexible storage solutions for all types of goods.</p>
-          <a href="#">See Locations</a>
+    </section>
+
+    <section id="faq-help" class="section">
+        <div class="container faq-help-box">
+            <h2>Need Help?</h2>
+            <p>We're here to assist you. Explore common questions or contact our support team for help.</p>
+
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I track my shipment? <span class="toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Enter your tracking number in the tracking section above to get live updates.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What regions do you cover? <span class="toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">We ship across major regions nationally and offer international freight as well.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I change delivery details after dispatch? <span class="toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">Yes, please contact support immediately for delivery changes.</div>
+            </div>
         </div>
-        <div class="service-card-box">
-          <h3>Last Mile Delivery</h3>
-          <p>On-time delivery to customers across urban and rural zones.</p>
-          <a href="#">Learn More</a>
+    </section>
+
+    <section id="track-shipment" class="section bg-light">
+        <div class="container tracking-box">
+            <h2>Track Your Shipment</h2>
+            <p>Enter your tracking number below to get real-time updates.</p>
+            <input type="text" placeholder="Enter Tracking ID" />
+            <button class="secondary-button">Track</button>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="client-testimonials" class="section bg-light">
-  <div class="container">
-    <h2>What Our Clients Are Saying</h2>
-    <div class="services-grid-box">
-      <div class="service-card-box">
-        <h3>Mike C</h3>
-        <p>"Shipping with SwiftThion was seamless and on time. Their team truly understands logistics and customer care."</p>
-      </div>
-      <div class="service-card-box">
-        <h3>Chris O</h3>
-        <p>"Our products reached customers faster than ever. SwiftThion’s supply chain solutions boosted our business efficiency."</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="partners" class="section bg-light">
-  <div class="container">
-    <h2>Our Partners</h2>
-    <div class="services-grid-box" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); align-items: center; justify-items: center; gap: 2rem;">
-      <div class="service-card-box" style="text-align: center; border: none; background: none; box-shadow: none;">
-        <img src="images/iyflogo.jpeg" alt="IYF Youth Fellowship Logo" style="max-width: 100px; height: auto; margin-bottom: 10px;">
-        <p>IYF Youth Fellowship</p>
-      </div>
-      <div class="service-card-box" style="text-align: center; border: none; background: none; box-shadow: none;">
-        <img src="goodnewsmission.jpg" alt="Good News Mission Logo" style="max-width: 100px; height: auto; margin-bottom: 10px;">
-        <p>Good News Mission</p>
-      </div>
-      <div class="service-card-box" style="text-align: center; border: none; background: none; box-shadow: none;">
-        <img src="gbstv.png" alt="GBS TV Logo" style="max-width: 100px; height: auto; margin-bottom: 10px;">
-        <p>GBS TV</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="faq-help" class="section">
-    <div class="container faq-help-box">
-      <h2>Need Help?</h2>
-      <p>We're here to assist you. Explore common questions or contact our support team for help.</p>
-
-      <h3>Frequently Asked Questions</h3>
-      <div class="faq-item">
-        <button class="faq-question">How can I track my shipment? <span class="toggle-icon">+</span></button>
-        <div class="faq-answer">Enter your tracking number in the tracking section above to get live updates.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">What regions do you cover? <span class="toggle-icon">+</span></button>
-        <div class="faq-answer">We ship across major regions nationally and offer international freight as well.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Can I change delivery details after dispatch? <span class="toggle-icon">+</span></button>
-        <div class="faq-answer">Yes, please contact support immediately for delivery changes.</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="track-shipment" class="section">
-    <div class="container tracking-box">
-      <h2>Track Your Shipment</h2>
-      <p>Enter your tracking number below to get real-time updates.</p>
-      <input type="text" placeholder="Enter Tracking ID" />
-      <button class="secondary-button">Track</button>
-    </div>
-  </section>
-
-  <section id="why-choose-us" class="section">
-    <div class="container choose-us-box">
-      <h2>Why Choose Swifthorn Logistics?</h2>
-      <ul>
-        <li>✅ Trusted by 500+ Businesses</li>
-        <li>✅ 24/7 Customer Support</li>
-        <li>✅ Real-Time Fleet Tracking</li>
-        <li>✅ Sustainable, Green Transport</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="cta" class="section bg-light">
-    <div class="container cta-box">
-      <h2>Ready to Streamline Your Logistics?</h2>
-      <p>Get a custom logistics solution tailored to your needs.</p>
-      <button class="primary-button">Get Started</button>
-    </div>
-  </section>
-
-
-<section id="contact" class="section bg-light">
-  <div class="container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
-    
-  
-    <div style="flex: 1; min-width: 280px;">
-      <h2>Contact Us</h2>
-      <p><strong>Email:</strong> sir.kevin.mwangi@gmail.com</p>
-      <p><strong>Phone:</strong> 0710186408</p>
-      <p><strong>Address:</strong> P.O BOX 39299-00623, Nairobi</p>
-    </div>
-  
-    <div style="flex: 1; min-width: 280px;">
-      <h2>Follow Us</h2>
-      <p><strong>Facebook:</strong> <a href="#">SwiftThion</a></p>
-      <p><strong>Twitter:</strong> <a href="#">@SwiftThion</a></p>
-      <p><strong>Instagram:</strong> <a href="#">@SwiftThion</a></p>
-    <div style="flex: 1; min-width: 280px;">
-      <h2>Write a Message</h2>
-      <form>
-        <div style="margin-bottom: 15px;">
-          <label for="email">Your Email</label><br>
-          <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <section id="why-choose-us" class="section">
+        <div class="container choose-us-box">
+            <h2>Why Choose SwiftThion Express Logistics?</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Trusted by 500+ Businesses</li>
+                <li><i class="fas fa-headset"></i> 24/7 Customer Support</li>
+                <li><i class="fas fa-map-marked-alt"></i> Real-Time Fleet Tracking</li>
+                <li><i class="fas fa-leaf"></i> Sustainable, Green Transport</li>
+            </ul>
         </div>
-        <div style="margin-bottom: 15px;">
-          <label for="message">Your Message</label><br>
-          <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+    </section>
+
+    <section id="cta" class="section bg-light">
+        <div class="container cta-box">
+            <h2>Ready to Streamline Your Logistics?</h2>
+            <p>Get a custom logistics solution tailored to your needs.</p>
+            <button class="primary-button">Get Started</button>
         </div>
-        <button type="submit" class="primary-button">Send Message</button>
-      </form>
-    </div>
-    
-  </div>
-</section>
+    </section>
 
-  <footer>
-    <div class="container footer-box">
-      <div class="footer-logo-box">SwiftThion.</div>
-      <p>&copy; 2025 SwiftThion. All rights reserved.</p>
-      <div class="footer-links-box">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact Support</a>
-      </div>
-    </div>
-  </footer>
+    <section id="contact" class="section">
+        <div class="container contact-content">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p><strong>Email:</strong> sir.kevin.mwangi@gmail.com</p>
+                <p><strong>Phone:</strong> 0710186408</p>
+                <p><strong>Address:</strong> P.O BOX 39299-00623, Nairobi</p>
+            </div>
 
-  <script>
-    const faqItems = document.querySelectorAll(".faq-item");
-    faqItems.forEach(item => {
-      item.querySelector(".faq-question").addEventListener("click", () => {
-        item.classList.toggle("active");
-      });
-    });
-  </script>
+            <div class="follow-us">
+                <h2>Follow Us</h2>
+                <p><strong>Facebook:</strong> <a href="#"><i class="fab fa-facebook"></i> SwiftThion Express</a></p>
+                <p><strong>Twitter:</strong> <a href="#"><i class="fab fa-twitter"></i> @SwiftThionExpress</a></p>
+                <p><strong>Instagram:</strong> <a href="#"><i class="fab fa-instagram"></i> @SwiftThionExpress</a></p>
+            </div>
 
+            <div class="message-form">
+                <h2>Write a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="primary-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-box">
+            <div class="footer-logo">SwiftThion Express.</div>
+            <p>&copy; 2025 SwiftThion Express. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        const faqItems = document.querySelectorAll(".faq-item");
+        faqItems.forEach((item) => {
+            const questionButton = item.querySelector(".faq-question");
+            questionButton.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
+
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains("active")) {
+                        otherItem.classList.remove("active");
+                        otherItem.querySelector(".toggle-icon").textContent = "+";
+                    }
+                });
+
+                item.classList.toggle("active");
+                const toggleIcon = item.querySelector(".toggle-icon");
+                toggleIcon.textContent = isActive ? "+" : "-";
+            });
+        });
+
+    </script>
 </body>
 </html>
