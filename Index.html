@@ -11,25 +11,24 @@
     <nav class="navbar">
         <div class="container nav-content">
             <ul class="nav-left">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Track</a></li>
+                <li><a href="#header-hero">Home</a></li>
+                <li><a href="#cargo-shipping">Shipping</a></li>
+                <li><a href="#track-shipment">Track</a></li>
             </ul>
             <div class="logo">
                 <h1><strong>SwiftThion Express</strong></h1>
             </div>
             <ul class="nav-right">
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#enterprise-logistics">Pricing</a></li>
+                <li><a href="#faq-help">Support</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
-
-    <header class="header">
+    
         <div class="image-container">
             <img src="images/card.png" alt="Fleet in motion" class="image" />
             <div class="overlay-text">
@@ -152,7 +151,7 @@
         <h2 class="section-title">What Our Clients Are Saying</h2>
         <p class="section-description">
             Positive experiences from our valued clients highlight our commitment to excellence in logistics and customer service.
-                  </p>
+        </p>
 
         <div class="services-grid-box testimonials-grid">
             <div class="service-card-box">
@@ -196,7 +195,7 @@
                     "The staff is highly knowledgeable, and their service is truly excellent.
                     They made an extraordinary effort to help us. Once again, their customer service was outstanding!
                 </p>
-            L</div>
+            </div>
         </div>
 
         <div class="testimonials-navigation">
@@ -214,6 +213,9 @@
     <section id="partners" class="section bg-light">
         <div class="container">
             <h2>Our Partners</h2>
+            <p class="section-description">
+                We collaborate with industry leaders to provide comprehensive and reliable logistics solutions worldwide.
+            </p>
             <div class="partners-grid">
                 <div class="partner-card">
                     <img src="images/iyflogo.jpeg" alt="IYF Youth Fellowship Logo" />
@@ -335,7 +337,6 @@
     </footer>
 
     <script>
-
         const faqItems = document.querySelectorAll(".faq-item");
         faqItems.forEach((item) => {
             const questionButton = item.querySelector(".faq-question");
@@ -355,6 +356,26 @@
             });
         });
 
+        // Testimonials carousel navigation
+        const testimonialsGrid = document.querySelector(".testimonials-grid");
+        const leftArrowButton = document.querySelector(".left-arrow");
+        const rightArrowButton = document.querySelector(".right-arrow");
+
+        if (testimonialsGrid && leftArrowButton && rightArrowButton) {
+            leftArrowButton.addEventListener("click", () => {
+                testimonialsGrid.scrollBy({
+                    left: -testimonialsGrid.offsetWidth / 2, // Scroll by half the visible width
+                    behavior: 'smooth'
+                });
+            });
+
+            rightArrowButton.addEventListener("click", () => {
+                testimonialsGrid.scrollBy({
+                    left: testimonialsGrid.offsetWidth / 2, // Scroll by half the visible width
+                    behavior: 'smooth'
+                });
+            });
+        }
     </script>
 </body>
 </html>

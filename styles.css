@@ -1,15 +1,15 @@
 /* --- CSS Variables --- */
 :root {
-    --primary-color: #ff6600; /* SwiftThion Orange */
+    --primary-color: #ff6600; /* SwiftThion Orange - Chosen for its vibrancy and energy, ideal for calls-to-action and highlighting key elements, evoking warmth and innovation. */
     --primary-hover-color: #e65500; /* Darker primary color for hover */
-    --secondary-color: #004080; /* Dark Blue */
-    --accent-color: #0066cc; /* Lighter Blue for hover/accent */
-    --light-bg: #f9f9f9;
-    --dark-bg: #e6e6e6; /* A slightly darker light background */
-    --white-color: #fff;
-    --text-color: #333;
-    --text-color-light: #666; /* Added for section descriptions, etc. */
-    --border-color: #ccc;
+    --secondary-color: #004080; /* Deep Ocean Blue - Represents trust, stability, and professionalism, forming the core brand identity. */
+    --accent-color: #0066cc; /* Sky Blue - A lighter, more dynamic blue, used for interactive elements, links, and secondary highlights to provide visual interest and contrast with the primary blue. */
+    --light-bg: #f9f9f9; /* Soft Off-White - Provides a clean, spacious backdrop, minimizing eye strain. */
+    --dark-bg: #e6e6e6; /* Subtle Grey Background - A slightly darker light background for alternating sections, adding visual separation. */
+    --white-color: #fff; /* Pure White - For text on dark backgrounds and card elements, ensuring high readability. */
+    --text-color: #333; /* Charcoal Grey - A soft, readable black for primary text, offering good contrast without being harsh. */
+    --text-color-light: #666; /* Medium Grey - For section descriptions and less emphasized text, providing softer contrast. */
+    --border-color: #ccc; /* Light Grey Border - For subtle delineation of elements. */
     --shadow-small: 0 2px 8px rgba(0,0,0,0.05); /* Renamed from shadow-light for clarity */
     --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
     --spacing-xs: 10px;
@@ -20,10 +20,14 @@
     --border-radius-sm: 5px;
     --border-radius-md: 8px;
     --border-radius-lg: 12px;
-    --light-peach-color: #ffe6d9; /* Example from image */
-    --dark-green-color: #0066cc;  /* Example from image */
+    --testimonial-bg-light: #ffe6d9; /* Soft Peach - A warm, inviting background for alternating testimonial cards, complementary to the orange. */
+    --testimonial-bg-dark: #0066cc; /* Reinforcing Sky Blue - Used for alternating testimonial cards, providing a strong contrast and echoing the accent color. */
+    --testimonial-text-dark: #004080; /* Deep Ocean Blue for text on light testimonial backgrounds */
 }
+
+/* Added smooth scrolling for anchor links */
 html {
+    scroll-behavior: smooth;
     box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
 }
 *, *::before, *::after {
@@ -78,7 +82,7 @@ ul {
 .section .section-title { /* Explicitly target section titles */
     font-size: clamp(1.8em, 4vw, 2.8em);
     margin-bottom: var(--spacing-lg);
-    color: var(--dark-blue-color); /* Specific color for section titles */
+    color: var(--secondary-color); /* Specific color for section titles */
 }
 .section .section-description { /* Explicitly target section descriptions */
     font-size: clamp(0.95em, 2vw, 1.1em);
@@ -152,16 +156,28 @@ ul {
     align-items: center;
     justify-content: center;
 }
-.logo-link {
-    display: block;
-    height: 100%;
+/* Styling for the H1 text logo in the navbar */
+.logo h1 {
+    font-size: 1.8rem; /* Default size for desktop */
+    color: var(--primary-color); /* Apply primary color to the text logo */
+    margin: 0; /* Remove default h1 margin */
+    line-height: 1; /* Adjust line height for better alignment */
 }
-.site-logo {
-    max-height: 40px;
-    width: auto;
-    filter: brightness(0) invert(1);
-    transition: max-height 0.3s ease;
-}
+
+/*
+.logo-link { /* Removed, as the logo is now an H1, not an image link */
+    /* display: block; */
+    /* height: 100%; */
+/* } */
+
+/*
+.site-logo { /* Removed, as the logo is now an H1, not an image */
+    /* max-height: 40px; */
+    /* width: auto; */
+    /* filter: brightness(0) invert(1); */
+    /* transition: max-height 0.3s ease; */
+/* } */
+
 .nav-left,
 .nav-right {
     display: flex;
@@ -198,8 +214,9 @@ ul {
 .image-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
+    /* Removed fixed padding-bottom, will use min-height and img's intrinsic ratio */
+    min-height: 400px; /* Adjust this value to control minimum height on large screens */
+    height: auto; /* Allow height to adjust based on content/image */
     overflow: hidden;
 }
 .image-container img.image {
@@ -415,11 +432,11 @@ ul {
 
 /* Specific styling for the cards' background colors in testimonials */
 .testimonials-grid .service-card-box:nth-child(2n+1) {
-    background-color: var(--light-peach-color);
-    color: var(--dark-blue-color);
+    background-color: var(--testimonial-bg-light);
+    color: var(--testimonial-text-dark);
 }
 .testimonials-grid .service-card-box:nth-child(2n) {
-    background-color: var(--dark-green-color);
+    background-color: var(--testimonial-bg-dark);
     color: var(--white-color);
 }
 .testimonials-navigation {
@@ -730,7 +747,7 @@ footer {
         margin-bottom: var(--spacing-sm);
     }
     .logo h1 { /* If you're using an h1 for logo, keep this. If it's just an image, this can be removed. */
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjusted for smaller screens */
     }
 
     /* How It Works Section */
@@ -910,7 +927,7 @@ footer {
         gap: var(--spacing-sm);
     }
     .logo h1 { /* If using h1 for logo */
-        font-size: 1.6rem;
+        font-size: 1.6rem; /* Adjusted for tablet screens */
     }
 
     /* How It Works Section */
@@ -948,7 +965,6 @@ footer {
     }
 }
 
-/* Large devices (desktops, 993px and up) - base styles should handle this */
 @media (min-width: 993px) {
     .container {
         padding: 0 var(--spacing-md);
