@@ -71,9 +71,9 @@ To set up this project locally for development or preview:
 Clone the repository:
 Bash
 
-git clone [repository-url]
+git clone [https://github.com/kevin-mwangi-thiongo/final-project]
 cd swiftthion-express-website
-(Replace [repository-url] with the actual URL once the GitHub repo is created and public).
+(Replace [https://github.com/kevin-mwangi-thiongo/final-project] with the actual URL once the GitHub repo is created and public).
 Ensure image assets are present: The website relies on images located in an images/ directory relative to index.html. Make sure the following files are in your images/ folder:
 truck2.jpg (How It Works section image)
 ship.png (Cargo Shipping section image)
