@@ -28,14 +28,12 @@
             </button>
         </div>
     </nav>
-    
-        <div class="image-container">
-            <img src="images/card.png" alt="Fleet in motion" class="image" />
-            <div class="overlay-text">
-                <h1>Smarter Logistics, Faster Deliveries</h1>
-                <p>Track, manage, and scale your shipping needs with SwiftThion Express.</p>
-                <button class="primary-button">Request a Quote</button>
-            </div>
+
+    <header id="header-hero" class="image-container">
+        <div class="overlay-text">
+            <h1>Smarter Logistics, Faster Deliveries</h1>
+            <p>Track, manage, and scale your shipping needs with SwiftThion Express.</p>
+            <button class="primary-button">Request a Quote</button>
         </div>
     </header>
 
@@ -204,11 +202,9 @@
             <button class="arrow-button right-arrow" aria-label="Next testimonial">
                 &rarr; </button>
         </div>
-        
+
     </div>
 </section>
-        
-    </section>
 
     <section id="partners" class="section bg-light">
         <div class="container">
@@ -218,15 +214,19 @@
             </p>
             <div class="partners-grid">
                 <div class="partner-card">
+                    <img src="images/kenyagov.jpg" alt="Kenya Government Logo" />
+                    <p>Kenya Government</p>
+                </div>
+                   <div class="partner-card">
+                    <img src="images/kenyaports.jpg" alt="Kenya Ports Authority Logo" />
+                    <p>Kenya Ports Authority</p>
+                </div>
+                <div class="partner-card">
                     <img src="images/iyflogo.jpeg" alt="IYF Youth Fellowship Logo" />
                     <p>IYF Youth Fellowship</p>
                 </div>
                 <div class="partner-card">
-                    <img src="images/goodnewsmission.jpg" alt="Good News Mission Logo" />
-                    <p>Good News Mission</p>
-                </div>
-                <div class="partner-card">
-                    <img src="images/gbstv.png" alt="GBS TV Logo" />
+                    <img src="images/gbstv.jpg" alt="GBS TV Logo" />
                     <p>GBS TV</p>
                 </div>
             </div>
@@ -238,26 +238,63 @@
             <h2>Need Help?</h2>
             <p>We're here to assist you. Explore common questions or contact our support team for help.</p>
 
-            <h3>Frequently Asked Questions</h3>
-            <div class="faq-item">
-                <button class="faq-question">
-                    How can I track my shipment? <span class="toggle-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Enter your tracking number in the tracking section above to get live updates.
+            <h3 class="section-title">Frequently Asked Questions</h3>
+            <div class="faq-accordion"> <div class="faq-item">
+                    <button class="faq-question">
+                        How can I track my shipment? <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can track your shipment instantly by visiting our "Track Shipment" page and entering your unique tracking number in the designated field. Our system provides real-time updates on your cargo's status and location.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    What regions do you cover? <span class="toggle-icon">+</span>
-                </button>
-                <div class="faq-answer">We ship across major regions nationally and offer international freight as well.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    Can I change delivery details after dispatch? <span class="toggle-icon">+</span>
-                </button>
-                <div class="faq-answer">Yes, please contact support immediately for delivery changes.</div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What regions do you cover? <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide extensive logistics services across Kenya, East Africa, and key international destinations worldwide. Our network allows us to handle shipments to and from major global trade hubs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I change delivery details after dispatch? <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, please contact our support team immediately if you need to change delivery details. While we'll do our best to accommodate changes, it may not always be possible depending on the shipment's current status and location.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What types of cargo do you handle? <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>SwiftThion Express handles a wide range of cargo, including general goods, perishable items, fragile goods, and certain hazardous materials. Please refer to our services page or contact us for specific requirements and restrictions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I get a custom quote for my business? <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For custom business logistics solutions and bulk shipping quotes, please visit our "Request a Quote" section or reach out to our sales team directly via phone or email. We'll tailor a solution to your specific needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer cargo insurance? <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer various cargo insurance options to protect your shipments against loss or damage during transit. We highly recommend discussing your insurance needs with our team to ensure adequate coverage for your valuable goods.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <button class="faq-question">
+                        What are your operating hours? <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our customer support team is available from 8:00 AM to 5:00 PM (EAT) Monday to Friday. Our online tracking system is available 24/7. For urgent inquiries outside operating hours, please refer to our emergency contact information.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -355,8 +392,6 @@
                 toggleIcon.textContent = isActive ? "+" : "-";
             });
         });
-
-        // Testimonials carousel navigation
         const testimonialsGrid = document.querySelector(".testimonials-grid");
         const leftArrowButton = document.querySelector(".left-arrow");
         const rightArrowButton = document.querySelector(".right-arrow");
@@ -364,14 +399,14 @@
         if (testimonialsGrid && leftArrowButton && rightArrowButton) {
             leftArrowButton.addEventListener("click", () => {
                 testimonialsGrid.scrollBy({
-                    left: -testimonialsGrid.offsetWidth / 2, // Scroll by half the visible width
+                    left: -testimonialsGrid.offsetWidth / 2, 
                     behavior: 'smooth'
                 });
             });
 
             rightArrowButton.addEventListener("click", () => {
                 testimonialsGrid.scrollBy({
-                    left: testimonialsGrid.offsetWidth / 2, // Scroll by half the visible width
+                    left: testimonialsGrid.offsetWidth / 2,
                     behavior: 'smooth'
                 });
             });

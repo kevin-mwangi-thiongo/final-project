@@ -1,16 +1,15 @@
-/* --- CSS Variables --- */
 :root {
-    --primary-color: #ff6600; /* SwiftThion Orange - Chosen for its vibrancy and energy, ideal for calls-to-action and highlighting key elements, evoking warmth and innovation. */
-    --primary-hover-color: #e65500; /* Darker primary color for hover */
-    --secondary-color: #004080; /* Deep Ocean Blue - Represents trust, stability, and professionalism, forming the core brand identity. */
-    --accent-color: #0066cc; /* Sky Blue - A lighter, more dynamic blue, used for interactive elements, links, and secondary highlights to provide visual interest and contrast with the primary blue. */
-    --light-bg: #f9f9f9; /* Soft Off-White - Provides a clean, spacious backdrop, minimizing eye strain. */
-    --dark-bg: #e6e6e6; /* Subtle Grey Background - A slightly darker light background for alternating sections, adding visual separation. */
-    --white-color: #fff; /* Pure White - For text on dark backgrounds and card elements, ensuring high readability. */
-    --text-color: #333; /* Charcoal Grey - A soft, readable black for primary text, offering good contrast without being harsh. */
-    --text-color-light: #666; /* Medium Grey - For section descriptions and less emphasized text, providing softer contrast. */
-    --border-color: #ccc; /* Light Grey Border - For subtle delineation of elements. */
-    --shadow-small: 0 2px 8px rgba(0,0,0,0.05); /* Renamed from shadow-light for clarity */
+    --primary-color: #ff6600;
+    --primary-hover-color: #e65500;
+    --secondary-color: #004080;
+    --accent-color: #0066cc;
+    --light-bg: #f9f9f9;
+    --dark-bg: #e6e6e6; 
+    --white-color: #fff;
+    --text-color: #333;
+    --text-color-light: #666;
+    --border-color: #ccc;
+    --shadow-small: 0 2px 8px rgba(0,0,0,0.05); 
     --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
     --spacing-xs: 10px;
     --spacing-sm: 15px;
@@ -20,18 +19,17 @@
     --border-radius-sm: 5px;
     --border-radius-md: 8px;
     --border-radius-lg: 12px;
-    --testimonial-bg-light: #ffe6d9; /* Soft Peach - A warm, inviting background for alternating testimonial cards, complementary to the orange. */
-    --testimonial-bg-dark: #0066cc; /* Reinforcing Sky Blue - Used for alternating testimonial cards, providing a strong contrast and echoing the accent color. */
-    --testimonial-text-dark: #004080; /* Deep Ocean Blue for text on light testimonial backgrounds */
+    --testimonial-bg-light: #ffe6d9; 
+    --testimonial-bg-dark: #0066cc;
+    --testimonial-text-dark: #004080; 
 }
 
-/* Added smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
-    box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+    box-sizing: border-box;
 }
 *, *::before, *::after {
-    box-sizing: inherit; /* Inherit box-sizing for all elements */
+    box-sizing: inherit;
 }
 
 body {
@@ -42,49 +40,44 @@ body {
     color: var(--text-color);
 }
 
-/* Grouping common heading styles */
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
-    color: var(--primary-color); /* Applied to all headings */
+    color: var(--primary-color);
 }
 
-/* Grouping common link styles */
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease; /* Add transition for all links */
+    transition: color 0.3s ease;
 }
 a:hover {
-    color: var(--accent-color); /* Default hover color for links */
+    color: var(--accent-color);
 }
 
-/* Base list styles */
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* --- Container Class --- */
 .container {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
 }
 
-/* --- Section General Styles --- */
 .section {
     padding: var(--spacing-xl) 0;
-    text-align: center; /* Default center align section content */
+    text-align: center;
 }
-.section .section-title { /* Explicitly target section titles */
+.section .section-title {
     font-size: clamp(1.8em, 4vw, 2.8em);
     margin-bottom: var(--spacing-lg);
-    color: var(--secondary-color); /* Specific color for section titles */
+    color: var(--secondary-color);
 }
-.section .section-description { /* Explicitly target section descriptions */
+.section .section-description {
     font-size: clamp(0.95em, 2vw, 1.1em);
     max-width: 800px;
     margin: 0 auto var(--spacing-lg) auto;
@@ -94,14 +87,12 @@ ul {
     background-color: var(--light-bg);
 }
 
-/* --- Buttons --- */
-/* Consolidated common button styles */
 .primary-button,
 .secondary-button {
     border: none;
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    border-radius: var(--border-radius-md); /* Consistent border-radius */
+    border-radius: var(--border-radius-md);
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s ease;
@@ -126,18 +117,15 @@ ul {
     background-color: var(--accent-color);
 }
 
-/* Specific button overrides */
 .explore-btn {
     margin-top: var(--spacing-xl);
 }
 
-
-/* --- Navbar Styles --- */
 .navbar {
     background-color: var(--secondary-color);
     color: var(--white-color);
     padding: var(--spacing-xs) 0;
-    box-shadow: var(--shadow-small); /* Using renamed variable */
+    box-shadow: var(--shadow-small);
     min-height: 60px;
     display: flex;
     align-items: center;
@@ -156,27 +144,12 @@ ul {
     align-items: center;
     justify-content: center;
 }
-/* Styling for the H1 text logo in the navbar */
 .logo h1 {
-    font-size: 1.8rem; /* Default size for desktop */
-    color: var(--primary-color); /* Apply primary color to the text logo */
-    margin: 0; /* Remove default h1 margin */
-    line-height: 1; /* Adjust line height for better alignment */
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1;
 }
-
-/*
-.logo-link { /* Removed, as the logo is now an H1, not an image link */
-    /* display: block; */
-    /* height: 100%; */
-/* } */
-
-/*
-.site-logo { /* Removed, as the logo is now an H1, not an image */
-    /* max-height: 40px; */
-    /* width: auto; */
-    /* filter: brightness(0) invert(1); */
-    /* transition: max-height 0.3s ease; */
-/* } */
 
 .nav-left,
 .nav-right {
@@ -205,48 +178,45 @@ ul {
     cursor: pointer;
 }
 
-
-/* --- Header (Hero) and Image Overlay Styles --- */
-.header {
-    width: 100%;
-    margin-bottom: var(--spacing-xl);
-}
 .image-container {
     position: relative;
     width: 100%;
-    /* Removed fixed padding-bottom, will use min-height and img's intrinsic ratio */
-    min-height: 400px; /* Adjust this value to control minimum height on large screens */
-    height: auto; /* Allow height to adjust based on content/image */
-    overflow: hidden;
+    background-image: url('images/card.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 500px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
 }
-.image-container img.image {
+
+.image-container::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
+
 .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: var(--white-color);
+    position: relative;
     z-index: 2;
     padding: var(--spacing-md);
     width: 90%;
     max-width: 800px;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: var(--border-radius-md);
+    color: var(--white-color);
 }
 .overlay-text h1 {
     font-size: clamp(2em, 5vw, 3.5em);
     margin-bottom: var(--spacing-sm);
     text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    color: var(--white-color);
 }
 .overlay-text p {
     font-size: clamp(1em, 2.5vw, 1.5em);
@@ -254,14 +224,12 @@ ul {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
-
-/* --- How It Works Section --- */
 .how-it-works-container {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-lg);
     align-items: center;
-    text-align: left; /* Align text within this section to left */
+    text-align: left;
 }
 .how-it-works-image {
     flex: 1;
@@ -278,23 +246,21 @@ ul {
     flex: 2;
     min-width: 300px;
 }
-/* Reusing general heading/paragraph styles, no need to redefine text-align here if parent is left-aligned */
+
 .how-it-works-text p {
-    margin-left: 0; /* Override default section p margin */
+    margin-left: 0;
     margin-right: 0;
 }
 .how-it-works-text strong {
     font-size: 1.1em;
 }
 
-
-/* --- Cargo Shipping Section --- */
 .cargo-container {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-lg);
     align-items: flex-start;
-    text-align: left; /* Align text within this section to left */
+    text-align: left;
 }
 .cargo-content-wrapper {
     flex: 2;
@@ -304,7 +270,7 @@ ul {
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-medium);
 }
-/* Reusing general heading/paragraph styles, no need to redefine text-align here */
+
 .cargo-content-wrapper h2 {
     margin-bottom: var(--spacing-sm);
 }
@@ -353,9 +319,7 @@ ul {
     box-shadow: var(--shadow-medium);
 }
 
-
-/* --- Services Grid & Card Box General Styles (including Testimonials) --- */
-.services-grid-box { /* This was generic grid for ALL service-card-box containers */
+.services-grid-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
@@ -380,9 +344,9 @@ ul {
 .service-card-box p {
     font-size: 0.95em;
     margin-bottom: var(--spacing-md);
-    margin-left: auto; /* Ensure paragraphs within cards are centered/auto */
+    margin-left: auto;
     margin-right: auto;
-    max-width: unset; /* Remove max-width for cards */
+    max-width: unset;
 }
 .service-card-box a {
     color: var(--primary-color);
@@ -390,47 +354,42 @@ ul {
     margin-top: var(--spacing-sm);
 }
 
-/* --- Specific Testimonials Grid & Card Styling (horizontal layout) --- */
-#client-testimonials { /* Moved section specific styles here */
-    background-color: var(--dark-bg); /* Use dark-bg or a specific var */
+#client-testimonials {
+    background-color: var(--dark-bg);
     padding: var(--spacing-xl) 0;
 }
-#client-testimonials .section-title { /* Override general section title color for testimonials */
+#client-testimonials .section-title {
     color: var(--secondary-color);
 }
 
-.testimonials-grid { /* Overrides services-grid-box for horizontal layout */
-    display: flex; /* KEY: Use flexbox for horizontal layout */
-    flex-wrap: nowrap; /* KEY: Prevent items from wrapping */
-    overflow-x: auto; /* Enables horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Makes scrolling snap to individual cards */
-    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
-    gap: var(--spacing-lg); /* Maintain gap */
-
-    /* Hide the scrollbar */
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+.testimonials-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--spacing-lg); 
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
 }
-/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+
 .testimonials-grid::-webkit-scrollbar {
     display: none;
     width: 0;
     height: 0;
 }
 
-/* Overrides for service-card-box when inside testimonials-grid */
 .testimonials-grid .service-card-box {
-    flex-shrink: 0; /* Prevent cards from shrinking smaller than their content */
-    min-width: 320px; /* Define a minimum width for each card */
-    max-width: 400px; /* Optional: Define a max-width if you don't want them too wide */
-    scroll-snap-align: start; /* Ensures each card snaps to the start when scrolling */
+    flex-shrink: 0; 
+    min-width: 320px;
+    max-width: 400px; 
+    scroll-snap-align: start; 
 }
-.testimonials-grid .service-card-box p { /* Specific styling for testimonial text */
+.testimonials-grid .service-card-box p { 
     font-style: italic;
     font-size: 1em;
 }
 
-/* Specific styling for the cards' background colors in testimonials */
 .testimonials-grid .service-card-box:nth-child(2n+1) {
     background-color: var(--testimonial-bg-light);
     color: var(--testimonial-text-dark);
@@ -441,7 +400,7 @@ ul {
 }
 .testimonials-navigation {
     display: flex;
-    justify-content: center; /* Center the navigation buttons */
+    justify-content: center;
     gap: var(--spacing-md);
     margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-lg);
@@ -485,7 +444,6 @@ ul {
     max-width: 100px;
     height: auto;
     margin-bottom: var(--spacing-xs);
-    filter: grayscale(80%);
     transition: filter 0.3s ease;
 }
 .partner-card img:hover {
@@ -516,134 +474,164 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    transition: background-color 0.3s ease;
 }
-.faq-question:hover {
-    background-color: var(--accent-color);
-}
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    background: #e6f0ff;
-    padding: 0 var(--spacing-md);
-    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    color: var(--text-color);
-}
-.faq-item.active .faq-answer {
-    max-height: 200px;
-    padding: var(--spacing-sm) var(--spacing-md);
-}
-.faq-item.active .faq-question {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.toggle-icon {
-    font-weight: 700;
-    font-size: 1.5rem;
-    user-select: none;
+
+.faq-question .toggle-icon {
+    font-size: 1.5em;
+    margin-left: var(--spacing-sm);
     transition: transform 0.3s ease;
 }
-.faq-item.active .toggle-icon {
+
+.faq-item.active .faq-question {
+    background-color: var(--accent-color);
+}
+
+.faq-item.active .faq-question .toggle-icon {
     transform: rotate(45deg);
 }
 
-.tracking-box {
-    text-align: center;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.tracking-box input[type="text"] {
-    width: calc(100% - 100px);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-sm);
-    font-size: 1rem;
-    margin-right: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
-    display: inline-block;
-    vertical-align: middle;
-}
-.tracking-box .secondary-button {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: 1rem;
-    min-width: 90px;
-    vertical-align: middle;
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    background-color: var(--white-color);
+    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+    box-shadow: var(--shadow-small);
+    text-align: left;
+    color: var(--text-color);
+    font-size: 0.95rem;
 }
 
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: var(--spacing-md);
+}
+
+.tracking-box {
+    background-color: var(--white-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+    max-width: 600px;
+    margin: var(--spacing-xl) auto;
+    text-align: center;
+}
+.tracking-box h2 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+}
+.tracking-box p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color-light);
+}
+.tracking-box input[type="text"] {
+    width: calc(100% - var(--spacing-md) * 2);
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 1em;
+}
+.tracking-box .secondary-button {
+    width: auto;
+    padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.choose-us-box {
+    text-align: left;
+}
+.choose-us-box h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--secondary-color);
+}
 .choose-us-box ul {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: center;
-    margin-top: var(--spacing-lg);
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
 }
 .choose-us-box li {
-    font-size: clamp(1em, 2vw, 1.2em);
-    color: var(--text-color);
-    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
+    color: var(--text-color);
 }
 .choose-us-box li i {
     color: var(--primary-color);
     margin-right: var(--spacing-xs);
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .cta-box {
-    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    max-width: 800px;
+    margin: var(--spacing-xl) auto;
 }
 .cta-box h2 {
-    color: var(--secondary-color);
+    color: var(--white-color);
+    margin-bottom: var(--spacing-sm);
 }
 .cta-box p {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--white-color);
+    opacity: 0.9;
+}
+.cta-box .primary-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.cta-box .primary-button:hover {
+    background-color: var(--primary-hover-color);
 }
 
 .contact-content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
-    justify-content: space-between;
     text-align: left;
 }
 .contact-info,
 .follow-us,
 .message-form {
-    flex: 1;
-    min-width: 280px;
+    background-color: var(--white-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-small);
 }
-.contact-info p,
-.follow-us p,
-.form-group label {
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left;
+.contact-info h2,
+.follow-us h2,
+.message-form h2 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
 }
 .contact-info p,
 .follow-us p {
-    margin-bottom: var(--spacing-xs);
-    font-size: 1em;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.8;
 }
 .contact-info strong {
-    color: var(--secondary-color);
+    color: var(--text-color);
+}
+.follow-us i {
+    margin-right: var(--spacing-xs);
+    color: var(--primary-color);
+    font-size: 1.1em;
 }
 .follow-us a {
-    display: inline-flex;
-    align-items: center;
-    color: var(--secondary-color);
-    font-weight: bold;
+    color: var(--text-color);
+    font-weight: 600;
 }
 .follow-us a:hover {
     color: var(--primary-color);
 }
-.follow-us a i {
-    margin-right: var(--spacing-xs);
-    font-size: 1.2em;
-}
-
 .form-group {
     margin-bottom: var(--spacing-md);
 }
@@ -651,7 +639,7 @@ ul {
     display: block;
     margin-bottom: var(--spacing-xs);
     font-weight: 600;
-    color: #555;
+    color: var(--text-color);
 }
 .form-group input[type="email"],
 .form-group textarea {
@@ -659,16 +647,12 @@ ul {
     padding: var(--spacing-sm);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-sm);
-    font-size: 1rem;
-    font-family: inherit;
-}
-.form-group textarea {
-    resize: vertical;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
 }
 .message-form .primary-button {
     width: auto;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    font-size: 1rem;
+    margin-top: var(--spacing-md);
 }
 
 footer {
@@ -676,297 +660,200 @@ footer {
     color: var(--white-color);
     padding: var(--spacing-md) 0;
     text-align: center;
+    font-size: 0.9em;
 }
 .footer-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     gap: var(--spacing-md);
 }
 .footer-logo {
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: bold;
+    font-size: 1.2em;
     color: var(--primary-color);
-}
-.footer-box p {
-    margin: 0;
-    font-size: 0.9em;
-    flex-basis: 100%;
-    order: 3;
-    margin-top: var(--spacing-md);
-}
-.footer-links {
-    display: flex;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
 }
 .footer-links a {
     color: var(--white-color);
-    font-weight: 600;
-    font-size: 0.9em;
+    margin: 0 var(--spacing-xs);
+    font-weight: 500;
 }
 .footer-links a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+    .nav-left, .nav-right {
+        gap: var(--spacing-sm);
+    }
+    .nav-left li a, .nav-right li a {
+        padding: var(--spacing-xs);
+        font-size: 0.9rem;
+    }
+    .logo h1 {
+        font-size: 1.6rem;
+    }
+    .cargo-image-wrapper {
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: var(--spacing-sm) 0;
+    }
+    .nav-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .nav-left,
+    .nav-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        padding: var(--spacing-md) 0;
+        box-shadow: var(--shadow-medium);
+    }
+    .nav-left li,
+    .nav-right li {
+        margin: var(--spacing-xs) 0;
+    }
+    .nav-left li a,
+    .nav-right li a {
+        display: block;
+        padding: var(--spacing-sm);
+        border-radius: 0;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: var(--spacing-md);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-left.active,
+    .nav-right.active {
+        display: flex;
+    }
+
+    .logo {
+        flex-grow: 1;
+        text-align: center;
+    }
+    .logo h1 {
+        font-size: 1.4rem;
+        margin-left: 0;
+    }
+
+    .image-container {
+        min-height: 350px;
+    }
+    .overlay-text h1 {
+        font-size: clamp(1.8em, 6vw, 2.5em);
+    }
+    .overlay-text p {
+        font-size: clamp(0.9em, 3vw, 1.2em);
+    }
+
+    .how-it-works-container,
+    .cargo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .how-it-works-text,
+    .cargo-content-wrapper {
+        min-width: unset;
+        text-align: center;
+    }
+    .how-it-works-text p,
+    .cargo-content-wrapper p {
+        margin: 0 auto var(--spacing-md) auto;
+        max-width: 600px;
+    }
+    .cargo-image-wrapper {
+        min-width: unset;
+        width: 100%;
+        order: -1;
+    }
+
+    .shipping-services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .services-grid-box {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid .service-card-box {
+        min-width: 90%; 
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    .contact-info,
+    .follow-us,
+    .message-form {
+        text-align: center;
+    }
+    .follow-us p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+}
+
+@media (max-width: 480px) {
     .container {
         padding: 0 var(--spacing-sm);
     }
     .section {
         padding: var(--spacing-lg) 0;
     }
-    .section .section-title {
-        font-size: 1.6em;
+    .overlay-text h1 {
+        font-size: clamp(1.5em, 8vw, 2em);
     }
-    .section .section-description {
-        font-size: 0.9em;
+    .overlay-text p {
+        font-size: clamp(0.8em, 4vw, 1em);
     }
-
-    /* Navbar */
-    .nav-content {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-sm);
-    }
-    .nav-left,
-    .nav-right {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        gap: var(--spacing-xs);
-    }
-    .nav-left li a,
-    .nav-right li a {
-        display: block;
-        padding: var(--spacing-xs);
-    }
-    .logo {
-        order: -1;
-        margin-bottom: var(--spacing-sm);
-    }
-    .logo h1 { /* If you're using an h1 for logo, keep this. If it's just an image, this can be removed. */
-        font-size: 1.5rem; /* Adjusted for smaller screens */
-    }
-
-    /* How It Works Section */
-    .how-it-works-container {
-        flex-direction: column;
-        text-align: center;
-        gap: var(--spacing-md);
-    }
-    .how-it-works-image {
-        order: -1;
-    }
-    .how-it-works-text h2,
-    .how-it-works-text p {
-        text-align: center;
-    }
-
-    /* Cargo Shipping Section */
-    .cargo-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .cargo-content-wrapper {
-        order: 1;
-        padding: var(--spacing-md);
-    }
-    .cargo-content-wrapper h2,
-    .cargo-content-wrapper p {
-        text-align: center;
+    .primary-button, .secondary-button {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: 0.9rem;
     }
     .shipping-services-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-sm);
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+        grid-template-columns: 1fr; 
     }
     .service-item {
-        justify-content: flex-start;
-    }
-    .cargo-image-wrapper {
-        order: -1;
-    }
-
-    /* Services Grid and Cards (General) */
-    .services-grid-box {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-    .service-card-box {
-        padding: var(--spacing-md);
-    }
-    .service-card-box h3 {
-        font-size: 1.3em;
-    }
-    .service-card-box p {
-        font-size: 0.9em;
-    }
-
-    /* Testimonials (Overrides general .service-card-box) */
-    .testimonials-grid .service-card-box {
-        min-width: 90vw; /* On smaller screens, make cards take up most of the viewport width */
-        max-width: 90vw; /* Ensure they don't exceed this for consistent snapping */
-    }
-    .testimonials-grid {
-        padding-left: var(--spacing-md);
-        padding-right: var(--spacing-md);
-    }
-    .testimonials-grid .service-card-box p {
-        font-size: 0.9em;
-    }
-
-    /* Partners Grid */
-    .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
-    }
-
-    /* FAQ */
-    .faq-help-box h2,
-    .faq-help-box h3,
-    .faq-help-box p {
-        text-align: center;
+        justify-content: center;
     }
     .faq-question {
         font-size: 1rem;
         padding: var(--spacing-xs) var(--spacing-sm);
     }
-    .faq-answer {
-        padding: 0 var(--spacing-sm);
-    }
-    .faq-item.active .faq-answer {
-        padding: var(--spacing-sm) var(--spacing-sm);
-    }
-
-    /* Track Shipment */
-    .tracking-box input[type="text"],
-    .tracking-box .secondary-button {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: var(--spacing-sm);
-    }
-
-    /* Why Choose Us */
-    .choose-us-box ul {
-        align-items: flex-start;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 300px;
-    }
-    .choose-us-box li {
-        text-align: left;
-        font-size: 1em;
-    }
-
-    /* Contact Section */
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-lg);
-        text-align: center;
-    }
-    .contact-info,
-    .follow-us,
-    .message-form {
-        width: 100%;
-        min-width: unset;
-    }
-    .contact-info p,
-    .follow-us p {
-        text-align: center;
-    }
-    .follow-us a {
-        justify-content: center;
-    }
-    .form-group label {
-        text-align: left;
-    }
-
-    /* Footer */
-    .footer-box {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-box p {
-        order: unset;
-        margin-top: 0;
-    }
-    .footer-links {
-        flex-direction: column;
-        gap: var(--spacing-xs);
-        margin-top: var(--spacing-sm);
-    }
-}
-
-/* Medium devices (tablets, 601px to 992px) */
-@media (min-width: 601px) and (max-width: 992px) {
-    .container {
-        padding: 0 var(--spacing-md);
-    }
-    .section {
-        padding: var(--spacing-xl) 0;
-    }
-    .section .section-title {
-        font-size: 2.2em;
-    }
-    .section .section-description {
-        font-size: 1em;
-    }
-
-    /* Navbar */
-    .nav-content {
-        gap: var(--spacing-md);
-    }
-    .nav-left,
-    .nav-right {
-        gap: var(--spacing-sm);
-    }
-    .logo h1 { /* If using h1 for logo */
-        font-size: 1.6rem; /* Adjusted for tablet screens */
-    }
-
-    /* How It Works Section */
-    .how-it-works-container {
-        gap: var(--spacing-lg);
-        text-align: left;
-    }
-    .how-it-works-image {
-        min-width: 400px;
-    }
-
-    /* Cargo Shipping Section */
-    .cargo-content-wrapper {
-        padding: var(--spacing-lg);
-    }
-    .shipping-services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Services Grid and Cards */
-    .services-grid-box {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    /* Contact Section */
-    .contact-content {
-        flex-direction: row;
-        gap: var(--spacing-lg);
-        justify-content: space-around;
-    }
-    .contact-info,
-    .follow-us,
-    .message-form {
-        min-width: 250px;
-    }
-}
-
-@media (min-width: 993px) {
-    .container {
-        padding: 0 var(--spacing-md);
+    .tracking-box input[type="text"] {
+        padding: var(--spacing-xs);
     }
 }
